@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!--<meta http-equiv="refresh" content="1.0">-->
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 15pt Arial;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Iniciando estudos com DOM</h1>
+    <p id="p1">Aqui vai o resultado</p>
+    <p class="p2">Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div name="msg" id="msg">Clique em mim</div>
+    <script>
+        /*
+        var tag = document.getElementsByTagName('h1')[0] -> por tag
+        var id = document.getElementById('p1') -> por id
+        var name = document.getElementsByName('msg')[0] -> por name
+        var classe = document.getElementsByClassName('p2')[0] -> por class
+        
+        
+        var p1 = document.getElementsByTagName('p')[0]
+        window.document.write(`Está escrito assim: "${p1.innerText}" `)
+
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        document.getElementById('msg').innerText = 'Oi!'
+        */
+
+        var d = document.querySelector('div#msg') // por seletor, utilizando CSS. MAIS RECOMENDÁVEL!!!
+        d.style.background = 'blue'
+
+    </script>
 </body>
 </html>
