@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora JS</title>
+    <style>
+        body {
+            font: normal normal 1em Arial;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            margin: auto;
+            max-width: 400px;
+        }
+
+        section#fatores {
+            padding: 5px;
+            text-align: center;
+        }
+
+        #fatores input {
+            padding: 5px;
+            display: inherit;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        #botao input {
+            display: inherit;
+            width: 100px;
+            padding: 5px 20px;
+            margin: 5px auto;
+        }
+
+        div#res {
+            padding-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculando Valores...</h1>
+    </header>
+    <main>
+        <section id="fatores">
+            <input type="number" name="txtn1" id="txtn1">
+            <input type="number" name="txtn2" id="txtn2">
+        </section>
+        <section id="botao">
+            <input type="button" value="Somar" onclick="somar()">
+            <input type="button" value="Média" onclick="media()">
+            <input type="button" value="Subtrair" onclick="subtracao()">
+            <input type="button" value="Multiplicar" onclick="multiplicacao()">
+        </section>
+        <div id="res"></div>
+    </main>
+
+    <script>
+        var res = document.querySelector('div#res')
+        function somar() {
+            var tn1 = document.querySelector('input#txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>! `
+        }
+
+        function media() {
+            var tn1 = document.querySelector('input#txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            var med = s / 2
+            res.innerHTML = `A média entre ${n1} e ${n2} é igual a <strong>${med}</strong>! `
+        }
+
+        function subtracao() {
+            var tn1 = document.querySelector('input#txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 - n2
+            res.innerHTML = `A subtração entre ${n1} e ${n2} é igual a <strong>${s}</strong>! `
+        }
+
+        function multiplicacao(){
+            var tn1 = document.querySelector('input#txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var m = n1 * n2
+            res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a <strong>${m}</strong>! `
+        }
+    </script>
+</body>
+</html>
