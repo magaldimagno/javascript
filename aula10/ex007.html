@@ -6,18 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora JS</title>
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
         body {
             font: normal normal 1em Arial;
         }
 
-        header {
-            text-align: center;
+        main {
+            margin: 40px auto 0px;
+            padding: 20px;
+            max-width: 400px;
+            background-image: linear-gradient(to bottom, rgb(185, 255, 255), rgb(200, 255, 255),rgb(224, 255, 255));
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.096);
         }
 
-        main {
-            padding: 20px;
-            margin: auto;
+        h1 {
+            text-align: center;
             max-width: 400px;
+            padding: 40px 20px;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
         }
 
         section#fatores {
@@ -62,9 +72,10 @@
 </head>
 <body>
     <header>
-        <h1>Calculando Valores...</h1>
+        
     </header>
     <main>
+        <h1>Calculando Valores</h1>
         <section id="fatores">
             <input type="number" name="txtn1" id="txtn1">
             <input type="number" name="txtn2" id="txtn2">
