@@ -8,5 +8,23 @@
 </head>
 <body>
     <h1>Controle de Imigração</h1>
+    País: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" id="botao">
+    <section id="res"></section>
+
+    <script>
+        var botão = document.querySelector('#botao')
+        botão.addEventListener('click', clicar)
+
+        function clicar() {
+            var res = document.querySelector('#res')
+            var país = document.querySelector('#pais')
+            if(país.value.toUpperCase() == 'BRASIL' ) {
+                res.innerHTML = `<p>Morando em <strong>${país.value.toUpperCase()}</strong>, você é <strong>BRASILEIRO!</strong></p>`
+            } else {
+                res.innerHTML = `<p>Morando em <strong>${país.value.toUpperCase()}</strong>, você é <strong>ESTRANGEIRO!</strong></p>`
+            }
+        }
+    </script>
 </body>
 </html>
