@@ -5,7 +5,7 @@ function verificar() {
     var txtnasc = document.querySelector('#txtnasc')
     var nasc = Number(txtnasc.value)
     
-    if (nasc.lenght == 0 || nasc > ano) {
+    if (nasc.lenght == 0 || nasc > ano || nasc == 0) {
         window.alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
         var idade = ano - nasc
