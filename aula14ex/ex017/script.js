@@ -5,6 +5,7 @@ function tabuada() {
     if (num.value.length == 0) {
         window.alert('Por favor, digite um número')
     } else {
+        tab.innerHTML = null
         let n = Number(num.value)
         for (let c = 1; c <= 10; c++) {
             let prod = n*c
