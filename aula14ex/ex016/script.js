@@ -20,18 +20,21 @@ function contar() {
             p = 1
         }
 
+        let cont = document.createElement('p')
+        res.appendChild(cont)
+
         if (f > i) {
             // Contagem crescente
             for (let c = i; c <= f; c += p) {
-                res.innerHTML += `${c} \u{1F449} `
+                cont.innerHTML += `${c} \u{1F449} `
             }
         } else {
             // Contagem decrescente
             for (let c = i; c >= f; c -= p) {
-                res.innerHTML += `${c} \u{1F449} `
+                cont.innerHTML += `${c} \u{1F449} `
             }
         }
 
-        res.innerHTML += `\u{1F3C1}`
+        cont.innerHTML += `\u{1F3C1}`
     }
 }
