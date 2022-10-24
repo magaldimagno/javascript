@@ -8,7 +8,10 @@ function tabuada() {
         tab.innerHTML = null
         let n = Number(num.value)
         for (let c = 1; c <= 10; c++) {
-            tab.innerHTML += `<option> ${n} x ${c} = ${n*c}</option>`
+//            tab.innerHTML += `<option> ${n} x ${c} = ${n*c}</option>`
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            tab.appendChild(item)
         }
     }
     
