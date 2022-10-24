@@ -1,6 +1,3 @@
-var botao = document.querySelector('#contar')
-botao.addEventListener('click', contar)
-
 function contar() {
     var res = document.querySelector('div#resultado')
     res.innerHTML = `<p>Contando:</p>`
