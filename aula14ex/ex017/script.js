@@ -4,6 +4,7 @@ function tabuada() {
 
     if (num.value.length == 0) {
         window.alert('Por favor, digite um número')
+//        location.reload()
     } else {
         tab.innerHTML = null
         let n = Number(num.value)
