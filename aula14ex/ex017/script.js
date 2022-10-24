@@ -1,12 +1,14 @@
 function tabuada() {
     let num = document.querySelector('#txtn')
-    let res = document.querySelector('#tabuada')
-    let n = Number(num.value)
+    let tab = document.querySelector('#seltab')
 
-    if (num.value.lenght > 0) {
-        let prod = n*c
+    if (num.value.length == 0) {
+        window.alert('Por favor, digite um número')
+    } else {
+        let n = Number(num.value)
         for (let c = 1; c <= 10; c++) {
-            res.innerHTML += `<option> ${n} x ${c} = ${prod}</option>`
+            let prod = n*c
+            tab.innerHTML += `<option> ${n} x ${c} = ${prod}</option>`
         }
     }
     
