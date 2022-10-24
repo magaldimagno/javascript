@@ -8,8 +8,7 @@ function tabuada() {
         tab.innerHTML = null
         let n = Number(num.value)
         for (let c = 1; c <= 10; c++) {
-            let prod = n*c
-            tab.innerHTML += `<option> ${n} x ${c} = ${prod}</option>`
+            tab.innerHTML += `<option> ${n} x ${c} = ${num*c}</option>`
         }
     }
     
