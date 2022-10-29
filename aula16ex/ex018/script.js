@@ -26,6 +26,19 @@ function adicionar(){
     }
 }
 
+function quantidade() {
+    return val.length
+}
+
+function maior(){
+    let pos = val.length-1
+    return val[pos]
+}
+
+function menor(){
+    return val[0]
+}
+
 function soma(){
     let soma = 0
     for(let c = val.length-1; c >= 0; c--) {
@@ -43,10 +56,25 @@ function finalizar(){
     if (val.length == 0) {
         window.alert('[ERRO] Adicione um valor')
     } else {
-        let rnum = document.createElement('p')
-        rnum.innerHTML = `Ao todo, temos ${val.length} números cadastrados.`
-        rnum.id = 'num'
-        res.appendChild(rnum)
+        res.innerHTML = null
+
+        val.sort()
+
+        
+        let rquantidade = document.createElement('p')
+        rquantidade.innerHTML = `Ao todo, temos ${quantidade()} números cadastrados.`
+        rquantidade.id = 'num'
+        res.appendChild(rquantidade)
+        
+        let rmaior = document.createElement('p')
+        rmaior.innerHTML = `O maior número cadastrado é ${maior()}.`
+        rmaior.id = 'maior'
+        res.appendChild(rmaior)
+
+        let rmenor = document.createElement('p')
+        rmenor.innerHTML = `O menor número cadastrado é ${menor()}.`
+        rmenor.id = 'menor'
+        res.appendChild(rmenor)
 
         let rsoma = document.createElement('p')
         rsoma.innerHTML = `Somando todos os valores, temos ${soma()}.`
