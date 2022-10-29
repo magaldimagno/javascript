@@ -26,7 +26,7 @@ function adicionar(){
     }
 }
 
-function fsoma(){
+function soma(){
     let soma = 0
     for(let c = val.length-1; c >= 0; c--) {
         soma += val[c]
@@ -34,9 +34,9 @@ function fsoma(){
     return soma
 }
 
-function fmedia(){
-    let soma = fsoma()
-    return soma/val.length
+function media(){
+    let s = soma()
+    return s/val.length
 }
 
 function finalizar(){
@@ -49,13 +49,12 @@ function finalizar(){
         res.appendChild(rnum)
 
         let rsoma = document.createElement('p')
-        let soma = fsoma()
-        rsoma.innerHTML = `Somando todos os valores, temos ${soma}.`
+        rsoma.innerHTML = `Somando todos os valores, temos ${soma()}.`
         rsoma.id = 'soma'
         res.appendChild(rsoma)
 
         let rmedia = document.createElement('p')
-        rmedia.innerHTML = `A média dos valores adicionados é ${fmedia()}.`
+        rmedia.innerHTML = `A média dos valores adicionados é ${media()}.`
         rmedia.id = 'media'
         res.appendChild(rmedia)
     }
