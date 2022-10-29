@@ -24,6 +24,8 @@ function adicionar(){
         valor.value = `val${val.length-1}`
         tab.appendChild(valor)
     }
+    num.value = null
+    num.focus()
 }
 
 function quantidade() {
@@ -54,7 +56,7 @@ function media(){
 
 function finalizar(){
     if (val.length == 0) {
-        window.alert('[ERRO] Adicione um valor')
+        window.alert('[ERRO] Adicione valores antes de finalizar!')
     } else {
         res.innerHTML = null
 
