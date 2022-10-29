@@ -14,9 +14,9 @@ function adicionar(){
     let num = document.querySelector('#txtn')
     let n = Number(num.value)
     if (n < 1 | n > 100 | num.value.length == 0) {
-        window.alert('[ERRO] Valor Inválido')
+        window.alert(`[ERRO] Valor ${n} inválido`)
     } else if (notinLista(n, val)) {
-        window.alert('[ERRO] Valor já está presente na lista')
+        window.alert(`[ERRO] Valor ${n} já está presente na lista`)
     } else {
         val.push(n)
         let valor = document.createElement('option')
