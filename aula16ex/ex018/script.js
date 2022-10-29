@@ -28,7 +28,7 @@ function adicionar(){
 
 function fsoma(){
     let soma = 0
-    for(let c = val.length; c >= 0; c--) {
+    for(let c = val.length-1; c >= 0; c--) {
         soma += val[c]
     }
     return soma
