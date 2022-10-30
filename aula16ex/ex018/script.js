@@ -65,7 +65,7 @@ function finalizar(){
         
         let rquantidade = document.createElement('p')
         rquantidade.innerHTML = `Ao todo, temos ${quantidade()} números cadastrados.`
-        rquantidade.id = 'num'
+        rquantidade.id = 'quantidade'
         res.appendChild(rquantidade)
         
         let rmaior = document.createElement('p')
