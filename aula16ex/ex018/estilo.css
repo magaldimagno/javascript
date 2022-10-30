@@ -22,6 +22,10 @@ section {
     width: 160px;
 }
 
+#reiniciar {
+    float: right;
+}
+
 footer {
     color: white;
     text-align: center;
